@@ -1,5 +1,5 @@
 {
-  "name": "udemy-api",
+  "name": "simple-udemy-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,15 +8,26 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterBrian99/simple-udemy-api.git"
+  },
+  "keywords": [
+    "github",
+    "udemy",
+    "api"
+  ],
+  "author": "MasterBrian99",
   "license": "ISC",
+  "homepage": "https://github.com/MasterBrian99/simple-udemy-api",
   "dependencies": {
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "nodemon": "^2.0.7"
-  }
+    "nodemon": "^2.0.7",
+    "serverless-http": "^2.7.0"
+  },
+  "licenses": "MIT"
 }

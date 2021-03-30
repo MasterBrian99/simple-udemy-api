@@ -17,14 +17,13 @@ function myLogger(req, res, next) {
 }
 app.use(myLogger);
 //get course details
-app.get("/course/:name", async function (req, res) {
+app.get("/:name", async function (req, res) {
   let courseName = req.params.name;
-  const data = await courseDetails.getDetails(courseName);
-  // ad.push(data);
+  let reqUrl = courseName.replace(/[\s,-]/g, "-").replace(/[-_,]+/g, "-");
+  const data = await courseDetails.getDetails(reqUrl);
   res.send(data);
 });
 
 app.listen(process.env.PORT || port, function () {
   console.log("server started");
 });
-// course - unit - container - Studentsareviewing;
